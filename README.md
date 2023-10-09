@@ -1,6 +1,6 @@
 # snapcrop 🖼
 
-Simple CLI utility for cropping large amounts images to a specified set of resolutions or aspect ratios.
+Simple CLI utility for cropping large amounts of images to a specified set of resolutions or aspect ratios.
 
 Useful for dataset preperation for machine learning tasks.
 
