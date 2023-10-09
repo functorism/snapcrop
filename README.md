@@ -118,7 +118,7 @@ snapcrop mixed --res 256,[128x256]
 ![](./examples/mixed/817c3a60efb2df3fa09438b804415e59d13c6cbb6dbcd16b3297cea85d6332d8.png)
 
 ```
-snapcrop steps --res [128:256:8x128:256:8]
+snapcrop steps --res 128:256:8
 ```
 ![](./examples/steps/1696724679130037776785781afeef06708c24d4ad2947ad28a6934978bc90ed.png)
 ![](./examples/steps/1845e03138df5b57315ed8f3240fd58582d9ee7acf7376c77825b5b45da6aacc.png)
