@@ -81,6 +81,50 @@ Options:
           Print help (see a summary with '-h')
 ```
 
+## Visual examples
+
+```
+snapcrop squares --res 256
+```
+![](./examples/squares/4de26fac0cc3162259bf785a64e836fb88e5550082ff2233d8f58de5263facf6.png)
+![](./examples/squares/50a5a51eb1d57307579b86508196fbb44fb770e7cd170257f573b3260b0b8feb.png)
+![](./examples/squares/653d96fb41779dda5ff6cc7a10745d33f4775e1267cd232403854b3656028678.png)
+![](./examples/squares/6b6fe23717af8d18ca11788013f0e789d90e40f6f4debff0cd2fcfb725d2a7d4.png)
+
+```
+snapcrop landscape --res 256x128
+```
+![](./examples/landscape/4de26fac0cc3162259bf785a64e836fb88e5550082ff2233d8f58de5263facf6.png)
+![](./examples/landscape/50a5a51eb1d57307579b86508196fbb44fb770e7cd170257f573b3260b0b8feb.png)
+![](./examples/landscape/653d96fb41779dda5ff6cc7a10745d33f4775e1267cd232403854b3656028678.png)
+![](./examples/landscape/6b6fe23717af8d18ca11788013f0e789d90e40f6f4debff0cd2fcfb725d2a7d4.png)
+
+
+```
+snapcrop portrait --res 128x256
+```
+![](./examples/portrait/4de26fac0cc3162259bf785a64e836fb88e5550082ff2233d8f58de5263facf6.png)
+![](./examples/portrait/50a5a51eb1d57307579b86508196fbb44fb770e7cd170257f573b3260b0b8feb.png)
+![](./examples/portrait/653d96fb41779dda5ff6cc7a10745d33f4775e1267cd232403854b3656028678.png)
+![](./examples/portrait/6b6fe23717af8d18ca11788013f0e789d90e40f6f4debff0cd2fcfb725d2a7d4.png)
+
+
+```
+snapcrop mixed --res 256,[128x256]
+```
+![](./examples/mixed/4de26fac0cc3162259bf785a64e836fb88e5550082ff2233d8f58de5263facf6.png)
+![](./examples/mixed/50a5a51eb1d57307579b86508196fbb44fb770e7cd170257f573b3260b0b8feb.png)
+![](./examples/mixed/653d96fb41779dda5ff6cc7a10745d33f4775e1267cd232403854b3656028678.png)
+![](./examples/mixed/6b6fe23717af8d18ca11788013f0e789d90e40f6f4debff0cd2fcfb725d2a7d4.png)
+
+```
+snapcrop steps --res [128:256:8x128:256:8]
+```
+![](./examples/steps/4de26fac0cc3162259bf785a64e836fb88e5550082ff2233d8f58de5263facf6.png)
+![](./examples/steps/50a5a51eb1d57307579b86508196fbb44fb770e7cd170257f573b3260b0b8feb.png)
+![](./examples/steps/653d96fb41779dda5ff6cc7a10745d33f4775e1267cd232403854b3656028678.png)
+![](./examples/steps/6b6fe23717af8d18ca11788013f0e789d90e40f6f4debff0cd2fcfb725d2a7d4.png)
+
 ## Dependencies
 The main libraries this CLI uses are:
 

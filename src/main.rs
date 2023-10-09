@@ -169,6 +169,8 @@ fn resize_and_crop(src_view: fr::DynamicImageView, res: Vec<(u32, u32)>) -> Resu
         })
         .ok_or_else(|| anyhow!("Could not find a valid resolution target"))?;
 
+    println!("{}x{} -> {}x{}", img_w, img_h, valid_w, valid_h);
+
     if img_w < valid_w || img_h < valid_h {
         return Err(anyhow!(
             "Image too small, skipping: {}x{} < {}x{}",
@@ -179,11 +181,12 @@ fn resize_and_crop(src_view: fr::DynamicImageView, res: Vec<(u32, u32)>) -> Resu
         ));
     }
 
-    // Determine the resize dimensions
     let (resize_w, resize_h) = if img_ratio > valid_w as f64 / valid_h as f64 {
-        (valid_w, (valid_w as f64 / img_ratio).round() as u32)
+        // If the image is more "landscape" than the target, match its height to the target height
+        ((img_w as f64 * valid_h as f64 / img_h as f64).round() as u32, valid_h)
     } else {
-        ((valid_h as f64 * img_ratio).round() as u32, valid_h)
+        // If the image is more "portrait" or equal to the target, match its width to the target width
+        (valid_w, (valid_w as f64 * img_h as f64 / img_w as f64).round() as u32)
     };
 
     // Resize the image while maintaining its original aspect ratio
@@ -283,6 +286,7 @@ fn main() -> Result<()> {
 
     res.sort();
     res.dedup();
+    res.reverse();
 
     // Ensure res is not empty and no dimension is 0
     if res.is_empty() || res.iter().any(|&(w, h)| w == 0 || h == 0) {
