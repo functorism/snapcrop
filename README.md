@@ -24,7 +24,7 @@ cargo install snapcrop
 
 Github
 ```
-git clone https://github.com/[YOUR_USERNAME]/snapcrop.git
+git clone https://github.com/functorism/snapcrop.git
 cd snapcrop
 cargo build --release
 ```
